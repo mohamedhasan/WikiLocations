@@ -11,7 +11,7 @@ import SwiftUI
 struct WikiLocationsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LocationsMapView()
         }
     }
 }
