@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import MapKit
 
 struct LocationsMapView: View {
 
@@ -18,18 +17,20 @@ struct LocationsMapView: View {
 
     var body: some View {
         VStack {
-            Map {
-                ForEach(viewModel.markers, content: { marker in
-                    Marker(marker.location.title ?? "", coordinate: marker.location.coordinate)
-                })
+            switch viewModel.state {
+            case .loading:
+                ProgressView()
+            case .error(let error):
+                ErrorRetryView(error: error) {
+                    Task {
+                        await viewModel.loadMarkers()
+                    }
+                }
+            case .loaded:
+                MapView().environment(viewModel)
             }
         }.task {
             await viewModel.loadMarkers()
         }
-        .padding()
     }
 }
-
-//#Preview {
-//    LocationsMapView<LocationModel>()
-//}

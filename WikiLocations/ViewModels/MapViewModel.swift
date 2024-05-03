@@ -8,7 +8,7 @@
 import Foundation
 
 @MainActor
-class MapViewModel: ObservableObject {
+class MapViewModel: ObservableObject, Observable {
     private let environment: Environment
     private let markersProvider: MarkersProvider
     @Published var markers: [MarkerModel] = []
