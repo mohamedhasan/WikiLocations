@@ -19,9 +19,17 @@ class FetchLocationsHandler: FetchLocationsProtocol {
             .appendingPathComponent("abnamrocoesd/assignment-ios/main/locations.json")
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        let (data, _) = try await URLSession.shared.data(for: request)
-        let decoder = JSONDecoder()
-        let locationsResponse = try decoder.decode(LocationModelResponse.self, from: data)
-        return locationsResponse.locations
+        do {
+            let (data, _) = try await URLSession.shared.data(for: request)
+            let decoder = JSONDecoder()
+            do {
+                let locationsResponse = try decoder.decode(LocationModelResponse.self, from: data)
+                return locationsResponse.locations
+            } catch {
+                throw NetworkError.otherErrors(error)
+            }
+        } catch {
+            throw NetworkError.invalidData
+        }
     }
 }
