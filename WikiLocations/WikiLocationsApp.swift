@@ -11,7 +11,8 @@ import SwiftUI
 struct WikiLocationsApp: App {
     var body: some Scene {
         WindowGroup {
-            LocationsMapView()
+            let viewModel = MapViewModel(environment: ProductionEnvironment())
+            LocationsMapView(viewModel: viewModel)
         }
     }
 }

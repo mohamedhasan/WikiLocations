@@ -7,6 +7,7 @@
 
 import Foundation
 
+@MainActor
 class MapViewModel: ObservableObject {
     private let environment: Environment
     private let markersProvider: MarkersProvider
@@ -21,7 +22,7 @@ class MapViewModel: ObservableObject {
     public func loadMarkers() async {
         do {
             markers = try await markersProvider.loadMarkers()
-            state = .loaded(markers: markers)
+            state = .loaded
         } catch {
             state = .error(error: error as? NetworkError ?? .unknownError)
         }

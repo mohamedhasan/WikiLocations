@@ -10,15 +10,21 @@ import MapKit
 
 struct LocationsMapView: View {
 
-    @State private var markers: [MarkerModel] = []
+    @StateObject private var viewModel: MapViewModel
+
+    init(viewModel: MapViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
 
     var body: some View {
         VStack {
             Map {
-                ForEach(markers, content: { marker in
+                ForEach(viewModel.markers, content: { marker in
                     Marker(marker.location.title ?? "", coordinate: marker.location.coordinate)
                 })
             }
+        }.task {
+            await viewModel.loadMarkers()
         }
         .padding()
     }

@@ -21,7 +21,7 @@ class FetchLocationsHandler: FetchLocationsProtocol {
         request.httpMethod = "GET"
         let (data, _) = try await URLSession.shared.data(for: request)
         let decoder = JSONDecoder()
-        let locations = try decoder.decode([LocationModel].self, from: data)
-        return locations
+        let locationsResponse = try decoder.decode(LocationModelResponse.self, from: data)
+        return locationsResponse.locations
     }
 }

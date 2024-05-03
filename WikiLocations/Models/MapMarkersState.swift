@@ -9,6 +9,6 @@ import Foundation
 
 enum MapMarkersState: Equatable {
     case loading
-    case loaded(markers: [MarkerModel])
+    case loaded
     case error(error: NetworkError)
 }
