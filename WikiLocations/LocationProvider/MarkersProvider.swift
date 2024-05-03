@@ -14,7 +14,7 @@ class MarkersProvider {
         self.fetchLocationsHandler = fetchLocationsHandler
     }
 
-    func loadLocations() async throws -> [MarkerModel] {
+    func loadMarkers() async throws -> [MarkerModel] {
         let locations = try await fetchLocationsHandler.fetchLocations()
         return locations.map({ MarkerModel(location: $0) })
     }

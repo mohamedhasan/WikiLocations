@@ -26,6 +26,8 @@
 		65F2D8BE2BE52CF8003DC95E /* Configurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8BD2BE52CF8003DC95E /* Configurations.swift */; };
 		65F2D8C02BE52D4D003DC95E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8BF2BE52D4D003DC95E /* NetworkError.swift */; };
 		65F2D8C22BE52DF0003DC95E /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8C12BE52DF0003DC95E /* NetworkReachability.swift */; };
+		65F2D8C42BE53025003DC95E /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8C32BE53025003DC95E /* MapViewModel.swift */; };
+		65F2D8C62BE531C7003DC95E /* MapMarkersState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8C52BE531C7003DC95E /* MapMarkersState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		65F2D8BD2BE52CF8003DC95E /* Configurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurations.swift; sourceTree = "<group>"; };
 		65F2D8BF2BE52D4D003DC95E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		65F2D8C12BE52DF0003DC95E /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
+		65F2D8C32BE53025003DC95E /* MapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		65F2D8C52BE531C7003DC95E /* MapMarkersState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarkersState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +166,7 @@
 			children = (
 				65F2D8A52BE4B477003DC95E /* Marker */,
 				65F2D8BF2BE52D4D003DC95E /* NetworkError.swift */,
+				65F2D8C52BE531C7003DC95E /* MapMarkersState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 		65F2D8A82BE4B670003DC95E /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				65F2D8C32BE53025003DC95E /* MapViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -353,9 +359,11 @@
 				65F2D8BB2BE52BE9003DC95E /* ProductionEnvironment.swift in Sources */,
 				65F2D8BE2BE52CF8003DC95E /* Configurations.swift in Sources */,
 				65F2D8A72BE4B48C003DC95E /* MarkerModel.swift in Sources */,
+				65F2D8C42BE53025003DC95E /* MapViewModel.swift in Sources */,
 				65F2D8772BE43AC5003DC95E /* LocationsMapView.swift in Sources */,
 				65F2D8752BE43AC5003DC95E /* WikiLocationsApp.swift in Sources */,
 				65F2D8B12BE5289D003DC95E /* MarkersProvider.swift in Sources */,
+				65F2D8C62BE531C7003DC95E /* MapMarkersState.swift in Sources */,
 				65F2D8B62BE529C0003DC95E /* FetchLocationsHandler.swift in Sources */,
 				65F2D8A02BE43CEA003DC95E /* LocationPresentable.swift in Sources */,
 				65F2D8C22BE52DF0003DC95E /* NetworkReachability.swift in Sources */,

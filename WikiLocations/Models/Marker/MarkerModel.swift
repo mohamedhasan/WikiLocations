@@ -7,7 +7,11 @@
 
 import Foundation
 
-class MarkerModel: Identifiable {
+class MarkerModel: Identifiable, Equatable {
+
+    static func == (lhs: MarkerModel, rhs: MarkerModel) -> Bool {
+        return lhs.id == rhs.id
+    }
 
     init(location: LocationPresentable) {
         self.location = location

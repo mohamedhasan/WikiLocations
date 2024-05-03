@@ -13,4 +13,5 @@ enum NetworkError: Error {
     case badURL
     case invalidData
     case noInternetConnection
+    case unknownError
 }
