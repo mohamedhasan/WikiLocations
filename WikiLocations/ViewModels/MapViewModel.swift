@@ -24,7 +24,11 @@ class MapViewModel: ObservableObject, Observable {
     public func loadMarkers() async {
         do {
             markers = try await markersProvider.loadMarkers()
-            state = .loaded
+            if markers.isEmpty {
+                state = .error(error: .noLocationsFound)
+            } else {
+                state = .loaded
+            }
         } catch {
             state = .error(error: error as? NetworkError ?? .unknownError)
         }

@@ -15,4 +15,5 @@ class AppStrings {
     static let corruptedData = NSLocalizedString("corruptedData", comment: "")
     static let unknownError = NSLocalizedString("unknownError", comment: "")
     static let showInWikiApp = NSLocalizedString("showInWikiApp", comment: "")
+    static let noLocationsFound = NSLocalizedString("noLocationsFound", comment: "")
 }

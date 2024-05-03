@@ -20,6 +20,8 @@ extension NetworkError {
             AppStrings.unknownError
         case .otherErrors(let error):
             error.localizedDescription
+        case .noLocationsFound:
+            AppStrings.noLocationsFound
         }
     }
 }

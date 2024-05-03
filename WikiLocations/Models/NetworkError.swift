@@ -19,4 +19,5 @@ enum NetworkError: Error, Equatable {
     case noInternetConnection
     case otherErrors(Error)
     case unknownError
+    case noLocationsFound
 }

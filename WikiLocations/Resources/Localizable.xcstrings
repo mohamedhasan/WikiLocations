@@ -48,6 +48,9 @@
         }
       }
     },
+    "noLocationsFound" : {
+      "extractionState" : "manual"
+    },
     "retryErrorButton" : {
       "extractionState" : "manual",
       "localizations" : {
