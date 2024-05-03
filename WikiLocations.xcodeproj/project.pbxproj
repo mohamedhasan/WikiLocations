@@ -18,6 +18,14 @@
 		65F2D8A42BE43DDA003DC95E /* LocationModel+MarkerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8A32BE43DD9003DC95E /* LocationModel+MarkerRepresentable.swift */; };
 		65F2D8A72BE4B48C003DC95E /* MarkerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8A62BE4B48C003DC95E /* MarkerModel.swift */; };
 		65F2D8AC2BE51381003DC95E /* MarkerModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8AB2BE51381003DC95E /* MarkerModelTests.swift */; };
+		65F2D8B12BE5289D003DC95E /* MarkersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8B02BE5289D003DC95E /* MarkersProvider.swift */; };
+		65F2D8B42BE5295C003DC95E /* FetchLocationsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8B32BE5295C003DC95E /* FetchLocationsProtocol.swift */; };
+		65F2D8B62BE529C0003DC95E /* FetchLocationsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8B52BE529C0003DC95E /* FetchLocationsHandler.swift */; };
+		65F2D8B92BE52B69003DC95E /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8B82BE52B69003DC95E /* Environment.swift */; };
+		65F2D8BB2BE52BE9003DC95E /* ProductionEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8BA2BE52BE9003DC95E /* ProductionEnvironment.swift */; };
+		65F2D8BE2BE52CF8003DC95E /* Configurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8BD2BE52CF8003DC95E /* Configurations.swift */; };
+		65F2D8C02BE52D4D003DC95E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8BF2BE52D4D003DC95E /* NetworkError.swift */; };
+		65F2D8C22BE52DF0003DC95E /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8C12BE52DF0003DC95E /* NetworkReachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +60,14 @@
 		65F2D8A32BE43DD9003DC95E /* LocationModel+MarkerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationModel+MarkerRepresentable.swift"; sourceTree = "<group>"; };
 		65F2D8A62BE4B48C003DC95E /* MarkerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerModel.swift; sourceTree = "<group>"; };
 		65F2D8AB2BE51381003DC95E /* MarkerModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerModelTests.swift; sourceTree = "<group>"; };
+		65F2D8B02BE5289D003DC95E /* MarkersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkersProvider.swift; sourceTree = "<group>"; };
+		65F2D8B32BE5295C003DC95E /* FetchLocationsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchLocationsProtocol.swift; sourceTree = "<group>"; };
+		65F2D8B52BE529C0003DC95E /* FetchLocationsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchLocationsHandler.swift; sourceTree = "<group>"; };
+		65F2D8B82BE52B69003DC95E /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		65F2D8BA2BE52BE9003DC95E /* ProductionEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionEnvironment.swift; sourceTree = "<group>"; };
+		65F2D8BD2BE52CF8003DC95E /* Configurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurations.swift; sourceTree = "<group>"; };
+		65F2D8BF2BE52D4D003DC95E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		65F2D8C12BE52DF0003DC95E /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +118,10 @@
 		65F2D8732BE43AC5003DC95E /* WikiLocations */ = {
 			isa = PBXGroup;
 			children = (
+				65F2D8BC2BE52CEF003DC95E /* Utilities */,
+				65F2D8B72BE52B57003DC95E /* Environment */,
+				65F2D8B22BE52904003DC95E /* Networking */,
+				65F2D8AF2BE5285D003DC95E /* LocationProvider */,
 				65F2D8A82BE4B670003DC95E /* ViewModels */,
 				65F2D89E2BE43CCA003DC95E /* Models */,
 				65F2D8742BE43AC5003DC95E /* WikiLocationsApp.swift */,
@@ -141,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				65F2D8A52BE4B477003DC95E /* Marker */,
+				65F2D8BF2BE52D4D003DC95E /* NetworkError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -161,6 +182,41 @@
 			children = (
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		65F2D8AF2BE5285D003DC95E /* LocationProvider */ = {
+			isa = PBXGroup;
+			children = (
+				65F2D8B02BE5289D003DC95E /* MarkersProvider.swift */,
+			);
+			path = LocationProvider;
+			sourceTree = "<group>";
+		};
+		65F2D8B22BE52904003DC95E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				65F2D8B32BE5295C003DC95E /* FetchLocationsProtocol.swift */,
+				65F2D8B52BE529C0003DC95E /* FetchLocationsHandler.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		65F2D8B72BE52B57003DC95E /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				65F2D8B82BE52B69003DC95E /* Environment.swift */,
+				65F2D8BA2BE52BE9003DC95E /* ProductionEnvironment.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		65F2D8BC2BE52CEF003DC95E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				65F2D8BD2BE52CF8003DC95E /* Configurations.swift */,
+				65F2D8C12BE52DF0003DC95E /* NetworkReachability.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,11 +350,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				65F2D8A22BE43D5D003DC95E /* LocationModel.swift in Sources */,
+				65F2D8BB2BE52BE9003DC95E /* ProductionEnvironment.swift in Sources */,
+				65F2D8BE2BE52CF8003DC95E /* Configurations.swift in Sources */,
 				65F2D8A72BE4B48C003DC95E /* MarkerModel.swift in Sources */,
 				65F2D8772BE43AC5003DC95E /* LocationsMapView.swift in Sources */,
 				65F2D8752BE43AC5003DC95E /* WikiLocationsApp.swift in Sources */,
+				65F2D8B12BE5289D003DC95E /* MarkersProvider.swift in Sources */,
+				65F2D8B62BE529C0003DC95E /* FetchLocationsHandler.swift in Sources */,
 				65F2D8A02BE43CEA003DC95E /* LocationRepresentable.swift in Sources */,
+				65F2D8C22BE52DF0003DC95E /* NetworkReachability.swift in Sources */,
 				65F2D8A42BE43DDA003DC95E /* LocationModel+MarkerRepresentable.swift in Sources */,
+				65F2D8C02BE52D4D003DC95E /* NetworkError.swift in Sources */,
+				65F2D8B42BE5295C003DC95E /* FetchLocationsProtocol.swift in Sources */,
+				65F2D8B92BE52B69003DC95E /* Environment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
