@@ -122,14 +122,14 @@
 		65F2D8732BE43AC5003DC95E /* WikiLocations */ = {
 			isa = PBXGroup;
 			children = (
+				65F2D8742BE43AC5003DC95E /* WikiLocationsApp.swift */,
 				65F2D8BC2BE52CEF003DC95E /* Utilities */,
 				65F2D8B72BE52B57003DC95E /* Environment */,
 				65F2D8B22BE52904003DC95E /* Networking */,
 				65F2D8AF2BE5285D003DC95E /* LocationProvider */,
 				65F2D8A82BE4B670003DC95E /* ViewModels */,
 				65F2D89E2BE43CCA003DC95E /* Models */,
-				65F2D8742BE43AC5003DC95E /* WikiLocationsApp.swift */,
-				65F2D8762BE43AC5003DC95E /* LocationsMapView.swift */,
+				65F2D8C72BE5332A003DC95E /* Presentation */,
 				65F2D8782BE43AC6003DC95E /* Assets.xcassets */,
 				65F2D87A2BE43AC6003DC95E /* Preview Content */,
 			);
@@ -223,6 +223,14 @@
 				65F2D8C12BE52DF0003DC95E /* NetworkReachability.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		65F2D8C72BE5332A003DC95E /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				65F2D8762BE43AC5003DC95E /* LocationsMapView.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
