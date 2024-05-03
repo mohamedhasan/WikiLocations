@@ -1,0 +1,87 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "badURL" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couldn't connect to server."
+          }
+        }
+      }
+    },
+    "corruptedData" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Some of the data is corrupted, please consider updating the app."
+          }
+        }
+      }
+    },
+    "Couldn't connect to server." : {
+
+    },
+    "No places found, please try again." : {
+
+    },
+    "noDataFoundMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No places found, please try again."
+          }
+        }
+      }
+    },
+    "noInternetConnection" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please check your internet and try again."
+          }
+        }
+      }
+    },
+    "Please check your internet and try again." : {
+
+    },
+    "retryErrorButton" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try again"
+          }
+        }
+      }
+    },
+    "Some of the data is corrupted, please consider updating the app." : {
+
+    },
+    "Unknown error" : {
+
+    },
+    "unknownError" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unknown error"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
