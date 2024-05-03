@@ -9,7 +9,7 @@ import Foundation
 
 class FetchLocationsHandler: FetchLocationsProtocol {
     func fetchLocations() async throws -> [LocationPresentable] {
-        if NetworkReachability.shared.networkAvailable {
+        if !NetworkReachability.shared.networkAvailable {
             throw NetworkError.noInternetConnection
         }
         guard let baseURLStr = Configurations.shared.endPoint, let baseURL = URL(string: baseURLStr) else {

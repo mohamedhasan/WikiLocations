@@ -23,12 +23,6 @@
         }
       }
     },
-    "Couldn't connect to server." : {
-
-    },
-    "No places found, please try again." : {
-
-    },
     "noDataFoundMessage" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -46,13 +40,10 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Please check your internet and try again."
+            "value" : "Please check your internet connection and try again."
           }
         }
       }
-    },
-    "Please check your internet and try again." : {
-
     },
     "retryErrorButton" : {
       "extractionState" : "manual",
@@ -64,12 +55,6 @@
           }
         }
       }
-    },
-    "Some of the data is corrupted, please consider updating the app." : {
-
-    },
-    "Unknown error" : {
-
     },
     "unknownError" : {
       "extractionState" : "manual",
