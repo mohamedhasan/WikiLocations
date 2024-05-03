@@ -8,7 +8,7 @@
 import Foundation
 
 class FetchLocationsHandler: FetchLocationsProtocol {
-    func fetchLocations() async throws -> [LocationRepresentable] {
+    func fetchLocations() async throws -> [LocationPresentable] {
         if NetworkReachability.shared.networkAvailable {
             throw NetworkError.noInternetConnection
         }

@@ -8,7 +8,7 @@
 import Foundation
 import CoreLocation
 
-protocol LocationRepresentable {
+protocol LocationPresentable {
     var title: String? { get }
     var coordinate: CLLocationCoordinate2D { get }
 }

@@ -9,10 +9,10 @@ import Foundation
 
 class MarkerModel: Identifiable {
 
-    init(location: LocationRepresentable) {
+    init(location: LocationPresentable) {
         self.location = location
     }
-    var location: LocationRepresentable
+    var location: LocationPresentable
     var id: String {
         "\(location.title ?? "")-\(location.coordinate.latitude)-\(location.coordinate.longitude)"
     }

@@ -8,5 +8,5 @@
 import Foundation
 
 protocol FetchLocationsProtocol {
-    func fetchLocations() async throws -> [LocationRepresentable]
+    func fetchLocations() async throws -> [LocationPresentable]
 }

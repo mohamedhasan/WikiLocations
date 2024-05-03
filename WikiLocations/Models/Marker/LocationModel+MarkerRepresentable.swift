@@ -8,7 +8,7 @@
 import Foundation
 import CoreLocation
 
-extension LocationModel: LocationRepresentable {
+extension LocationModel: LocationPresentable {
     
     var title: String? {
         name
