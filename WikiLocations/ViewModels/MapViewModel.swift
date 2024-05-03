@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 @MainActor
 class MapViewModel: ObservableObject, Observable {
@@ -46,5 +47,13 @@ class MapViewModel: ObservableObject, Observable {
             selectedMarker = marker
             marker.selected = true
         }
+    }
+
+    public func openExternalLink(_ marker: MarkerModel) {
+        let externalLinkHandler = environment.externalLinkHandler
+        guard let url = externalLinkHandler.url(for: marker.location) else {
+            return
+        }
+        UIApplication.shared.open(url)
     }
 }

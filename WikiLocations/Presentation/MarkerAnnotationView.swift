@@ -20,7 +20,7 @@ struct MarkerAnnotationView: View {
                         .font(.callout)
                         .opacity(model.selected && (model.location.title != nil) ? 1 : 0)
                     Button("", systemImage: DesignSystem.shared.assets.openInWikiIconName, action: {
-                        
+                        viewModel.openExternalLink(model)
                     })
                 }
                 .padding(DesignSystem.shared.spacer.small)

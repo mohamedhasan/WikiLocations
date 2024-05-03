@@ -36,6 +36,8 @@
 		65F2D8D32BE53EDF003DC95E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8D22BE53EDF003DC95E /* MapView.swift */; };
 		65F2D8D62BE5522E003DC95E /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 65F2D8D52BE5522E003DC95E /* Localizable.xcstrings */; };
 		65F2D8D82BE55834003DC95E /* MarkerAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8D72BE55834003DC95E /* MarkerAnnotationView.swift */; };
+		65F2D8DB2BE59F7C003DC95E /* ExternalLinkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8DA2BE59F7C003DC95E /* ExternalLinkProtocol.swift */; };
+		65F2D8DD2BE5A062003DC95E /* WikiExternalLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8DC2BE5A062003DC95E /* WikiExternalLink.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,8 @@
 		65F2D8D22BE53EDF003DC95E /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		65F2D8D52BE5522E003DC95E /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		65F2D8D72BE55834003DC95E /* MarkerAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerAnnotationView.swift; sourceTree = "<group>"; };
+		65F2D8DA2BE59F7C003DC95E /* ExternalLinkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalLinkProtocol.swift; sourceTree = "<group>"; };
+		65F2D8DC2BE5A062003DC95E /* WikiExternalLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiExternalLink.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +144,7 @@
 			children = (
 				65F2D8742BE43AC5003DC95E /* WikiLocationsApp.swift */,
 				65F2D8D42BE55219003DC95E /* Resources */,
+				65F2D8D92BE59820003DC95E /* ExternalLinks */,
 				65F2D8BC2BE52CEF003DC95E /* Utilities */,
 				65F2D8B72BE52B57003DC95E /* Environment */,
 				65F2D8B22BE52904003DC95E /* Networking */,
@@ -263,6 +268,15 @@
 				65F2D8D52BE5522E003DC95E /* Localizable.xcstrings */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		65F2D8D92BE59820003DC95E /* ExternalLinks */ = {
+			isa = PBXGroup;
+			children = (
+				65F2D8DA2BE59F7C003DC95E /* ExternalLinkProtocol.swift */,
+				65F2D8DC2BE5A062003DC95E /* WikiExternalLink.swift */,
+			);
+			path = ExternalLinks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,9 +410,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65F2D8DB2BE59F7C003DC95E /* ExternalLinkProtocol.swift in Sources */,
 				65F2D8A22BE43D5D003DC95E /* LocationModel.swift in Sources */,
 				65F2D8D12BE53BDE003DC95E /* NetworkError+errorMessage.swift in Sources */,
 				65F2D8BB2BE52BE9003DC95E /* ProductionEnvironment.swift in Sources */,
+				65F2D8DD2BE5A062003DC95E /* WikiExternalLink.swift in Sources */,
 				65F2D8D32BE53EDF003DC95E /* MapView.swift in Sources */,
 				65F2D8BE2BE52CF8003DC95E /* Configurations.swift in Sources */,
 				65F2D8A72BE4B48C003DC95E /* MarkerModel.swift in Sources */,

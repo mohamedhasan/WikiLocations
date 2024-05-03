@@ -12,4 +12,7 @@ class ProductionEnvironment: Environment {
         let fetchLocationsHandler = FetchLocationsHandler()
      return MarkersProvider(fetchLocationsHandler: fetchLocationsHandler)
     }
+    var externalLinkHandler: ExternalLinkProtocol {
+        return WikiExternalLink()
+    }
 }
