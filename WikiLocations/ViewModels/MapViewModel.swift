@@ -11,6 +11,8 @@ import Foundation
 class MapViewModel: ObservableObject, Observable {
     private let environment: Environment
     private let markersProvider: MarkersProvider
+    private var selectedMarker: MarkerModel?
+
     @Published var markers: [MarkerModel] = []
     @Published var state = MapMarkersState.loading
 
@@ -25,6 +27,20 @@ class MapViewModel: ObservableObject, Observable {
             state = .loaded
         } catch {
             state = .error(error: error as? NetworkError ?? .unknownError)
+        }
+    }
+
+    public func toggleMarker(_ marker: MarkerModel) {
+        guard markers.contains(marker) else {
+            return
+        }
+        if marker.selected {
+            marker.selected = false
+            selectedMarker = nil
+        } else {
+            selectedMarker?.selected.toggle()
+            selectedMarker = marker
+            marker.selected = true
         }
     }
 }

@@ -13,7 +13,10 @@ struct MapView: View {
     var body: some View {
         Map {
             ForEach(viewModel.markers, content: { marker in
-                Marker(marker.location.title ?? "", coordinate: marker.location.coordinate)
+                Annotation(marker.location.title ?? "", coordinate: marker.location.coordinate) {
+                    MarkerAnnotationView(model: marker)
+                        .environmentObject(viewModel)
+                }
             })
         }
     }

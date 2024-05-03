@@ -16,7 +16,7 @@ struct ErrorRetryView: View {
             Text(error.errorMessage)
                 .padding()
             Spacer()
-                .frame(height: DesignSystem.shared.bottomMargin)
+                .frame(height: DesignSystem.shared.spacer.medium)
             Button(AppStrings.retryErrorButton) {
                 Task {
                     await retryAction()
