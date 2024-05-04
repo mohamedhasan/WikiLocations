@@ -42,6 +42,12 @@
 		65F2D8E12BE5ACA4003DC95E /* UserDefinedLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8E02BE5ACA4003DC95E /* UserDefinedLocation.swift */; };
 		65F2D8E32BE5B11E003DC95E /* MarkerType+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8E22BE5B11E003DC95E /* MarkerType+Extension.swift */; };
 		65F2D8E52BE5BF8E003DC95E /* MapHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8E42BE5BF8E003DC95E /* MapHeader.swift */; };
+		65F2D8EA2BE6B56A003DC95E /* MarkerTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8E92BE6B56A003DC95E /* MarkerTypeTests.swift */; };
+		65F2D8ED2BE6B63F003DC95E /* MarkersProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8EC2BE6B63F003DC95E /* MarkersProviderTests.swift */; };
+		65F2D8F02BE6B701003DC95E /* MockFetchLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8EF2BE6B701003DC95E /* MockFetchLocations.swift */; };
+		65F2D8F32BE6B7A2003DC95E /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 65F2D8F22BE6B7A2003DC95E /* locations.json */; };
+		65F2D8F52BE6B81A003DC95E /* MockNetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8F42BE6B81A003DC95E /* MockNetworkResult.swift */; };
+		65F2D8FA2BE6BD14003DC95E /* WikiExternalLinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8F92BE6BD14003DC95E /* WikiExternalLinkTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +106,12 @@
 		65F2D8E02BE5ACA4003DC95E /* UserDefinedLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefinedLocation.swift; sourceTree = "<group>"; };
 		65F2D8E22BE5B11E003DC95E /* MarkerType+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MarkerType+Extension.swift"; sourceTree = "<group>"; };
 		65F2D8E42BE5BF8E003DC95E /* MapHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapHeader.swift; sourceTree = "<group>"; };
+		65F2D8E92BE6B56A003DC95E /* MarkerTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerTypeTests.swift; sourceTree = "<group>"; };
+		65F2D8EC2BE6B63F003DC95E /* MarkersProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkersProviderTests.swift; sourceTree = "<group>"; };
+		65F2D8EF2BE6B701003DC95E /* MockFetchLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFetchLocations.swift; sourceTree = "<group>"; };
+		65F2D8F22BE6B7A2003DC95E /* locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
+		65F2D8F42BE6B81A003DC95E /* MockNetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkResult.swift; sourceTree = "<group>"; };
+		65F2D8F92BE6BD14003DC95E /* WikiExternalLinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiExternalLinkTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,7 +189,13 @@
 		65F2D8842BE43AC6003DC95E /* WikiLocationsTests */ = {
 			isa = PBXGroup;
 			children = (
-				65F2D8AB2BE51381003DC95E /* MarkerModelTests.swift */,
+				65F2D8F12BE6B76B003DC95E /* JSONS */,
+				65F2D8EE2BE6B6A9003DC95E /* Mocks */,
+				65F2D8F82BE6BCE7003DC95E /* Presentations */,
+				65F2D8F72BE6BCDC003DC95E /* ViewModels */,
+				65F2D8F62BE6BCD6003DC95E /* ExternalLinks */,
+				65F2D8EB2BE6B628003DC95E /* MarkersProvider */,
+				65F2D8E82BE6B350003DC95E /* Models */,
 			);
 			path = WikiLocationsTests;
 			sourceTree = "<group>";
@@ -289,6 +307,62 @@
 				65F2D8DC2BE5A062003DC95E /* WikiExternalLink.swift */,
 			);
 			path = ExternalLinks;
+			sourceTree = "<group>";
+		};
+		65F2D8E82BE6B350003DC95E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				65F2D8AB2BE51381003DC95E /* MarkerModelTests.swift */,
+				65F2D8E92BE6B56A003DC95E /* MarkerTypeTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		65F2D8EB2BE6B628003DC95E /* MarkersProvider */ = {
+			isa = PBXGroup;
+			children = (
+				65F2D8EC2BE6B63F003DC95E /* MarkersProviderTests.swift */,
+			);
+			path = MarkersProvider;
+			sourceTree = "<group>";
+		};
+		65F2D8EE2BE6B6A9003DC95E /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				65F2D8EF2BE6B701003DC95E /* MockFetchLocations.swift */,
+				65F2D8F42BE6B81A003DC95E /* MockNetworkResult.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		65F2D8F12BE6B76B003DC95E /* JSONS */ = {
+			isa = PBXGroup;
+			children = (
+				65F2D8F22BE6B7A2003DC95E /* locations.json */,
+			);
+			path = JSONS;
+			sourceTree = "<group>";
+		};
+		65F2D8F62BE6BCD6003DC95E /* ExternalLinks */ = {
+			isa = PBXGroup;
+			children = (
+				65F2D8F92BE6BD14003DC95E /* WikiExternalLinkTests.swift */,
+			);
+			path = ExternalLinks;
+			sourceTree = "<group>";
+		};
+		65F2D8F72BE6BCDC003DC95E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		65F2D8F82BE6BCE7003DC95E /* Presentations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,6 +479,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65F2D8F32BE6B7A2003DC95E /* locations.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,7 +533,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65F2D8FA2BE6BD14003DC95E /* WikiExternalLinkTests.swift in Sources */,
+				65F2D8ED2BE6B63F003DC95E /* MarkersProviderTests.swift in Sources */,
 				65F2D8AC2BE51381003DC95E /* MarkerModelTests.swift in Sources */,
+				65F2D8F52BE6B81A003DC95E /* MockNetworkResult.swift in Sources */,
+				65F2D8EA2BE6B56A003DC95E /* MarkerTypeTests.swift in Sources */,
+				65F2D8F02BE6B701003DC95E /* MockFetchLocations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
