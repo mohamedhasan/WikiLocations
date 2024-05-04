@@ -30,9 +30,14 @@ class DesignSystem {
     }
 
     class Colors {
-        var primary: Color = .red
-        var secondary: Color = .green
-        var background: Color = .white
+        func color(light: UIColor, dark: UIColor) -> Color {
+            Color(UIColor { $0.userInterfaceStyle == .dark ? dark : light })
+        }
+
+        var primary: Color { color(light: .red, dark: .white.withAlphaComponent(0.7))}
+        var secondary: Color { color(light: .green, dark: .lightGray)}
+        var background: Color { color(light: .white, dark: .black.withAlphaComponent(0.9))}
+        var iconsTintColor: Color  { color(light: .systemBlue, dark: .systemCyan)}
     }
 
     private init() {}

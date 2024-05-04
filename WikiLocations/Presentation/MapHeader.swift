@@ -23,6 +23,7 @@ struct MapHeader: View {
                 Button("", systemImage: customLocationEnabled ? DesignSystem.shared.assets.customLocationEnabled : DesignSystem.shared.assets.customLocationDisabled, action: {
                     viewModel.customLocationEnabled.toggle()
                 })
+                .foregroundColor(DesignSystem.shared.colors.iconsTintColor)
             }.onTapGesture {
                 viewModel.customLocationEnabled.toggle()
             }
@@ -38,6 +39,7 @@ struct MapHeader: View {
                     await viewModel.loadMarkers()
                 }
             })
+            .foregroundColor(DesignSystem.shared.colors.iconsTintColor)
             .padding(DesignSystem.shared.spacer.small)
             .background(Color(DesignSystem.shared.colors.background))
             .cornerRadius(DesignSystem.shared.spacer.medium)

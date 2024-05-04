@@ -22,6 +22,7 @@ struct MarkerAnnotationView: View {
                     Button("", systemImage: DesignSystem.shared.assets.openInWikiIconName, action: {
                         viewModel.openExternalLink(model)
                     })
+                    .foregroundColor(DesignSystem.shared.colors.iconsTintColor)
                 }
                 .padding(DesignSystem.shared.spacer.small)
                 .background(Color(DesignSystem.shared.colors.background))
