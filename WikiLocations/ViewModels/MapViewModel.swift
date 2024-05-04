@@ -12,7 +12,7 @@ import MapKit
 class MapViewModel: ObservableObject {
     private let environment: Environment
     private let markersProvider: MarkersProvider
-    private var selectedMarker: MarkerModel?
+    internal var selectedMarker: MarkerModel?
 
     @Published var markers: [MarkerModel] = []
     @Published var userDefinedMarker: MarkerModel?
@@ -69,9 +69,11 @@ class MapViewModel: ObservableObject {
     }
 
     public func addUserDefinedMarker(_ coordinate: CLLocationCoordinate2D) {
-        let location = UserDefinedLocation(coordinate: coordinate)
-        userDefinedMarker = MarkerModel(location: location, .userDefined)
-        userDefinedMarker?.selected = true
+        if customLocationEnabled {
+            let location = UserDefinedLocation(coordinate: coordinate)
+            userDefinedMarker = MarkerModel(location: location, .userDefined)
+            userDefinedMarker?.selected = true
+        }
     }
 
     public func openExternalLink(_ marker: MarkerModel) {

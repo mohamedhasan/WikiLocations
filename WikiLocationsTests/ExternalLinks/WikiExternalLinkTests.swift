@@ -6,11 +6,10 @@
 //
 
 import XCTest
-import CoreLocation
 @testable import WikiLocations
 
 final class WikiExternalLinkTests: XCTestCase {
-    
+
     func testCanProvideURLForValidLocation() throws {
         let linkFactory = WikiExternalLink()
         let model = LocationModel(name: "India",
@@ -24,6 +23,5 @@ final class WikiExternalLinkTests: XCTestCase {
             XCTFail()
         }
     }
-
 }
 

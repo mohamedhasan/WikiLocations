@@ -48,6 +48,10 @@
 		65F2D8F32BE6B7A2003DC95E /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 65F2D8F22BE6B7A2003DC95E /* locations.json */; };
 		65F2D8F52BE6B81A003DC95E /* MockNetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8F42BE6B81A003DC95E /* MockNetworkResult.swift */; };
 		65F2D8FA2BE6BD14003DC95E /* WikiExternalLinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8F92BE6BD14003DC95E /* WikiExternalLinkTests.swift */; };
+		65F2D8FC2BE6C1C1003DC95E /* MapViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8FB2BE6C1C1003DC95E /* MapViewModelTests.swift */; };
+		65F2D8FE2BE6C228003DC95E /* TestEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8FD2BE6C228003DC95E /* TestEnvironment.swift */; };
+		65F2D9002BE6C464003DC95E /* locations-empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 65F2D8FF2BE6C464003DC95E /* locations-empty.json */; };
+		65F2D9022BE6C954003DC95E /* MockExternalLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D9012BE6C953003DC95E /* MockExternalLink.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +116,10 @@
 		65F2D8F22BE6B7A2003DC95E /* locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
 		65F2D8F42BE6B81A003DC95E /* MockNetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkResult.swift; sourceTree = "<group>"; };
 		65F2D8F92BE6BD14003DC95E /* WikiExternalLinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiExternalLinkTests.swift; sourceTree = "<group>"; };
+		65F2D8FB2BE6C1C1003DC95E /* MapViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModelTests.swift; sourceTree = "<group>"; };
+		65F2D8FD2BE6C228003DC95E /* TestEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEnvironment.swift; sourceTree = "<group>"; };
+		65F2D8FF2BE6C464003DC95E /* locations-empty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "locations-empty.json"; sourceTree = "<group>"; };
+		65F2D9012BE6C953003DC95E /* MockExternalLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockExternalLink.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,6 +339,8 @@
 			children = (
 				65F2D8EF2BE6B701003DC95E /* MockFetchLocations.swift */,
 				65F2D8F42BE6B81A003DC95E /* MockNetworkResult.swift */,
+				65F2D8FD2BE6C228003DC95E /* TestEnvironment.swift */,
+				65F2D9012BE6C953003DC95E /* MockExternalLink.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -338,6 +348,7 @@
 		65F2D8F12BE6B76B003DC95E /* JSONS */ = {
 			isa = PBXGroup;
 			children = (
+				65F2D8FF2BE6C464003DC95E /* locations-empty.json */,
 				65F2D8F22BE6B7A2003DC95E /* locations.json */,
 			);
 			path = JSONS;
@@ -354,6 +365,7 @@
 		65F2D8F72BE6BCDC003DC95E /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				65F2D8FB2BE6C1C1003DC95E /* MapViewModelTests.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -479,6 +491,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65F2D9002BE6C464003DC95E /* locations-empty.json in Resources */,
 				65F2D8F32BE6B7A2003DC95E /* locations.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,8 +548,11 @@
 			files = (
 				65F2D8FA2BE6BD14003DC95E /* WikiExternalLinkTests.swift in Sources */,
 				65F2D8ED2BE6B63F003DC95E /* MarkersProviderTests.swift in Sources */,
+				65F2D8FC2BE6C1C1003DC95E /* MapViewModelTests.swift in Sources */,
+				65F2D9022BE6C954003DC95E /* MockExternalLink.swift in Sources */,
 				65F2D8AC2BE51381003DC95E /* MarkerModelTests.swift in Sources */,
 				65F2D8F52BE6B81A003DC95E /* MockNetworkResult.swift in Sources */,
+				65F2D8FE2BE6C228003DC95E /* TestEnvironment.swift in Sources */,
 				65F2D8EA2BE6B56A003DC95E /* MarkerTypeTests.swift in Sources */,
 				65F2D8F02BE6B701003DC95E /* MockFetchLocations.swift in Sources */,
 			);
