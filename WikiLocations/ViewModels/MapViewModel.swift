@@ -6,16 +6,24 @@
 //
 
 import Foundation
-import UIKit
+import MapKit
 
 @MainActor
-class MapViewModel: ObservableObject, Observable {
+class MapViewModel: ObservableObject {
     private let environment: Environment
     private let markersProvider: MarkersProvider
     private var selectedMarker: MarkerModel?
 
     @Published var markers: [MarkerModel] = []
+    @Published var userDefinedMarker: MarkerModel?
     @Published var state = MapMarkersState.loading
+    @Published var customLocationEnabled = false {
+        didSet {
+            if !customLocationEnabled {
+                userDefinedMarker = nil
+            }
+        }
+    }
 
     init(environment: Environment) {
         self.environment = environment
@@ -35,7 +43,16 @@ class MapViewModel: ObservableObject, Observable {
         }
     }
 
-    public func toggleMarker(_ marker: MarkerModel) {
+    public func toggleMarkerSelection(_ marker: MarkerModel) {
+        switch marker.type {
+        case .locationMarker:
+            handleLocationMarkerSelection(marker)
+        default:
+            return
+        }
+    }
+
+    private func handleLocationMarkerSelection(_ marker: MarkerModel) {
         guard markers.contains(marker) else {
             return
         }
@@ -47,6 +64,12 @@ class MapViewModel: ObservableObject, Observable {
             selectedMarker = marker
             marker.selected = true
         }
+    }
+
+    public func addUserDefinedMarker(_ coordinate: CLLocationCoordinate2D) {
+        let location = UserDefinedLocation(coordinate: coordinate)
+        userDefinedMarker = MarkerModel(location: location, .userDefined)
+        userDefinedMarker?.selected = true
     }
 
     public func openExternalLink(_ marker: MarkerModel) {

@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct MarkerAnnotationView: View {
-    @StateObject var model: MarkerModel
+    @EnvironmentObject var model: MarkerModel
     @EnvironmentObject var viewModel: MapViewModel
 
     var body: some View {
@@ -24,18 +24,18 @@ struct MarkerAnnotationView: View {
                     })
                 }
                 .padding(DesignSystem.shared.spacer.small)
-                .background(Color(.white))
+                .background(Color(DesignSystem.shared.colors.background))
                 .cornerRadius(DesignSystem.shared.spacer.medium)
                 .opacity(model.selected ? 1 : 0)
                 Image(systemName: DesignSystem.shared.assets.mapPin)
                     .font(.title)
-                    .foregroundColor(.red)
+                    .foregroundColor(model.type.pinColor)
                 Image(systemName: DesignSystem.shared.assets.mapArrow)
                     .font(.caption)
-                    .foregroundColor(.red)
+                    .foregroundColor(model.type.pinColor)
                     .offset(x: 0, y: -DesignSystem.shared.spacer.small)
             }.onTapGesture {
-                viewModel.toggleMarker(model)
+                viewModel.toggleMarkerSelection(model)
             }
         }
     }

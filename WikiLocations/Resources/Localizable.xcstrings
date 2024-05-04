@@ -4,6 +4,17 @@
     "" : {
 
     },
+    "addLocationInstruction" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap on map to add your own place."
+          }
+        }
+      }
+    },
     "badURL" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -69,6 +80,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Show in Wiki app"
+          }
+        }
+      }
+    },
+    "tapToAddLocation" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap to add new location"
           }
         }
       }

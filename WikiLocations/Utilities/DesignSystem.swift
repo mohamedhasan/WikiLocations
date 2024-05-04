@@ -24,10 +24,20 @@ class DesignSystem {
         }
         var mapPin: String = "mappin.circle.fill"
         var mapArrow: String = "arrowtriangle.down.fill"
+        var customLocationDisabled: String = "mappin.slash"
+        var customLocationEnabled: String = "mappin.and.ellipse"
     }
+
+    class Colors {
+        var primary: Color = .red
+        var secondary: Color = .green
+        var background: Color = .white
+    }
+
     private init() {}
 
     public static let shared: DesignSystem = DesignSystem()
     public let spacer = Spacer()
     public let assets = Assets()
+    public let colors = Colors()
 }

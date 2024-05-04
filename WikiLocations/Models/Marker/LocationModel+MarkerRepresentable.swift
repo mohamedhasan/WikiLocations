@@ -9,11 +9,9 @@ import Foundation
 import CoreLocation
 
 extension LocationModel: LocationPresentable {
-    
     var title: String? {
         name
     }
-
     var coordinate: CLLocationCoordinate2D {
         CLLocationCoordinate2DMake(lat, long)
     }

@@ -38,6 +38,10 @@
 		65F2D8D82BE55834003DC95E /* MarkerAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8D72BE55834003DC95E /* MarkerAnnotationView.swift */; };
 		65F2D8DB2BE59F7C003DC95E /* ExternalLinkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8DA2BE59F7C003DC95E /* ExternalLinkProtocol.swift */; };
 		65F2D8DD2BE5A062003DC95E /* WikiExternalLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8DC2BE5A062003DC95E /* WikiExternalLink.swift */; };
+		65F2D8DF2BE5AB9D003DC95E /* MarkerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8DE2BE5AB9D003DC95E /* MarkerType.swift */; };
+		65F2D8E12BE5ACA4003DC95E /* UserDefinedLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8E02BE5ACA4003DC95E /* UserDefinedLocation.swift */; };
+		65F2D8E32BE5B11E003DC95E /* MarkerType+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8E22BE5B11E003DC95E /* MarkerType+Extension.swift */; };
+		65F2D8E52BE5BF8E003DC95E /* MapHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8E42BE5BF8E003DC95E /* MapHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +96,10 @@
 		65F2D8D72BE55834003DC95E /* MarkerAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerAnnotationView.swift; sourceTree = "<group>"; };
 		65F2D8DA2BE59F7C003DC95E /* ExternalLinkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalLinkProtocol.swift; sourceTree = "<group>"; };
 		65F2D8DC2BE5A062003DC95E /* WikiExternalLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiExternalLink.swift; sourceTree = "<group>"; };
+		65F2D8DE2BE5AB9D003DC95E /* MarkerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerType.swift; sourceTree = "<group>"; };
+		65F2D8E02BE5ACA4003DC95E /* UserDefinedLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefinedLocation.swift; sourceTree = "<group>"; };
+		65F2D8E22BE5B11E003DC95E /* MarkerType+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MarkerType+Extension.swift"; sourceTree = "<group>"; };
+		65F2D8E42BE5BF8E003DC95E /* MapHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +210,9 @@
 				65F2D8C82BE5345C003DC95E /* LocationModelResponse.swift */,
 				65F2D8A32BE43DD9003DC95E /* LocationModel+MarkerRepresentable.swift */,
 				65F2D8A62BE4B48C003DC95E /* MarkerModel.swift */,
+				65F2D8DE2BE5AB9D003DC95E /* MarkerType.swift */,
+				65F2D8E02BE5ACA4003DC95E /* UserDefinedLocation.swift */,
+				65F2D8E22BE5B11E003DC95E /* MarkerType+Extension.swift */,
 			);
 			path = Marker;
 			sourceTree = "<group>";
@@ -256,6 +267,7 @@
 			children = (
 				65F2D8762BE43AC5003DC95E /* LocationsMapView.swift */,
 				65F2D8D22BE53EDF003DC95E /* MapView.swift */,
+				65F2D8E42BE5BF8E003DC95E /* MapHeader.swift */,
 				65F2D8D72BE55834003DC95E /* MarkerAnnotationView.swift */,
 				65F2D8CA2BE53B3A003DC95E /* ErrorRetryView.swift */,
 			);
@@ -420,6 +432,7 @@
 				65F2D8A72BE4B48C003DC95E /* MarkerModel.swift in Sources */,
 				65F2D8CB2BE53B3A003DC95E /* ErrorRetryView.swift in Sources */,
 				65F2D8C42BE53025003DC95E /* MapViewModel.swift in Sources */,
+				65F2D8E12BE5ACA4003DC95E /* UserDefinedLocation.swift in Sources */,
 				65F2D8772BE43AC5003DC95E /* LocationsMapView.swift in Sources */,
 				65F2D8752BE43AC5003DC95E /* WikiLocationsApp.swift in Sources */,
 				65F2D8B12BE5289D003DC95E /* MarkersProvider.swift in Sources */,
@@ -430,11 +443,14 @@
 				65F2D8D82BE55834003DC95E /* MarkerAnnotationView.swift in Sources */,
 				65F2D8A02BE43CEA003DC95E /* LocationPresentable.swift in Sources */,
 				65F2D8C22BE52DF0003DC95E /* NetworkReachability.swift in Sources */,
+				65F2D8E52BE5BF8E003DC95E /* MapHeader.swift in Sources */,
+				65F2D8E32BE5B11E003DC95E /* MarkerType+Extension.swift in Sources */,
 				65F2D8A42BE43DDA003DC95E /* LocationModel+MarkerRepresentable.swift in Sources */,
 				65F2D8CF2BE53B67003DC95E /* DesignSystem.swift in Sources */,
 				65F2D8C02BE52D4D003DC95E /* NetworkError.swift in Sources */,
 				65F2D8B42BE5295C003DC95E /* FetchLocationsProtocol.swift in Sources */,
 				65F2D8B92BE52B69003DC95E /* Environment.swift in Sources */,
+				65F2D8DF2BE5AB9D003DC95E /* MarkerType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

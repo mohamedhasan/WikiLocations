@@ -16,4 +16,7 @@ class AppStrings {
     static let unknownError = NSLocalizedString("unknownError", comment: "")
     static let showInWikiApp = NSLocalizedString("showInWikiApp", comment: "")
     static let noLocationsFound = NSLocalizedString("noLocationsFound", comment: "")
+    static let tapToAddLocation = NSLocalizedString("tapToAddLocation", comment: "")
+    static let addLocationInstruction = NSLocalizedString("addLocationInstruction", comment: "")
+    
 }

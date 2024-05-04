@@ -11,13 +11,16 @@ import SwiftUI
 class MarkerModel: Identifiable, Equatable, ObservableObject {
 
     @Published var selected: Bool = false
+    var type: MarkerType
+
     var location: LocationPresentable
     var id: String {
         "\(location.title ?? "")-\(location.coordinate.latitude)-\(location.coordinate.longitude)"
     }
 
-    init(location: LocationPresentable) {
+    init(location: LocationPresentable, _ type: MarkerType = .locationMarker) {
         self.location = location
+        self.type = type
     }
 
     static func == (lhs: MarkerModel, rhs: MarkerModel) -> Bool {
