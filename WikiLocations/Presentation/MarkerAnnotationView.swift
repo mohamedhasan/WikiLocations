@@ -31,10 +31,6 @@ struct MarkerAnnotationView: View {
                 Image(systemName: DesignSystem.shared.assets.mapPin)
                     .font(.title)
                     .foregroundColor(model.type.pinColor)
-                Image(systemName: DesignSystem.shared.assets.mapArrow)
-                    .font(.caption)
-                    .foregroundColor(model.type.pinColor)
-                    .offset(x: 0, y: -DesignSystem.shared.spacer.small)
             }.onTapGesture {
                 viewModel.toggleMarkerSelection(model)
             }
