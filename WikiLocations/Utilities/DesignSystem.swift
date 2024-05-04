@@ -26,6 +26,7 @@ class DesignSystem {
         var mapArrow: String = "arrowtriangle.down.fill"
         var customLocationDisabled: String = "mappin.slash"
         var customLocationEnabled: String = "mappin.and.ellipse"
+        var refresh: String = "arrow.circlepath"
     }
 
     class Colors {

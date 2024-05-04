@@ -14,23 +14,36 @@ struct MapHeader: View {
 
     var body: some View {
         HStack {
-            Text(
-                customLocationEnabled ?
-                AppStrings.addLocationInstruction : AppStrings.tapToAddLocation
-            )
-            .font(.callout)
-            Button("", systemImage: customLocationEnabled ? DesignSystem.shared.assets.customLocationEnabled : DesignSystem.shared.assets.customLocationDisabled, action: {
+            HStack {
+                Text(
+                    customLocationEnabled ?
+                    AppStrings.addLocationInstruction : AppStrings.tapToAddLocation
+                )
+                .font(.callout)
+                Button("", systemImage: customLocationEnabled ? DesignSystem.shared.assets.customLocationEnabled : DesignSystem.shared.assets.customLocationDisabled, action: {
+                    viewModel.customLocationEnabled.toggle()
+                })
+            }.onTapGesture {
                 viewModel.customLocationEnabled.toggle()
+            }
+            .padding(DesignSystem.shared.spacer.small)
+            .background(Color(DesignSystem.shared.colors.background))
+            .cornerRadius(DesignSystem.shared.spacer.medium)
+            .opacity(0.7)
+            .onReceive(viewModel.$customLocationEnabled, perform: { enabled in
+                customLocationEnabled = enabled
             })
+            Button(AppStrings.refresh, systemImage: DesignSystem.shared.assets.refresh, action: {
+                Task {
+                    await viewModel.loadMarkers()
+                }
+            })
+            .padding(DesignSystem.shared.spacer.small)
+            .background(Color(DesignSystem.shared.colors.background))
+            .cornerRadius(DesignSystem.shared.spacer.medium)
+            .opacity(0.7)
         }.onTapGesture {
             viewModel.customLocationEnabled.toggle()
         }
-        .padding(DesignSystem.shared.spacer.small)
-        .background(Color(DesignSystem.shared.colors.background))
-        .cornerRadius(DesignSystem.shared.spacer.medium)
-        .opacity(0.7)
-        .onReceive(viewModel.$customLocationEnabled, perform: { enabled in
-            customLocationEnabled = enabled
-        })
     }
 }

@@ -32,6 +32,8 @@ class MapViewModel: ObservableObject {
 
     public func loadMarkers() async {
         do {
+            markers = []
+            state = .loading
             markers = try await markersProvider.loadMarkers()
             if markers.isEmpty {
                 state = .error(error: .noLocationsFound)

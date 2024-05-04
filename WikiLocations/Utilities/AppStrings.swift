@@ -18,5 +18,6 @@ class AppStrings {
     static let noLocationsFound = NSLocalizedString("noLocationsFound", comment: "")
     static let tapToAddLocation = NSLocalizedString("tapToAddLocation", comment: "")
     static let addLocationInstruction = NSLocalizedString("addLocationInstruction", comment: "")
+    static let refresh = NSLocalizedString("refresh", comment: "")
     
 }
