@@ -20,13 +20,15 @@ struct MapHeader: View {
                     AppStrings.addLocationInstruction : AppStrings.tapToAddLocation
                 )
                 .font(.callout)
-                Button("", systemImage: customLocationEnabled ? DesignSystem.shared.assets.customLocationEnabled : DesignSystem.shared.assets.customLocationDisabled, action: {
-                    viewModel.customLocationEnabled.toggle()
-                })
+                Image(systemName: customLocationEnabled ? DesignSystem.shared.assets.customLocationEnabled : DesignSystem.shared.assets.customLocationDisabled)
                 .foregroundColor(DesignSystem.shared.colors.iconsTintColor)
             }.onTapGesture {
                 viewModel.customLocationEnabled.toggle()
             }
+            .accessibilityAction {
+                viewModel.customLocationEnabled.toggle()
+            }
+            .accessibilityKey(.headerCustomLocationEnabled(customLocationEnabled))
             .padding(DesignSystem.shared.spacer.small)
             .background(Color(DesignSystem.shared.colors.background))
             .cornerRadius(DesignSystem.shared.spacer.medium)
@@ -44,8 +46,12 @@ struct MapHeader: View {
             .background(Color(DesignSystem.shared.colors.background))
             .cornerRadius(DesignSystem.shared.spacer.medium)
             .opacity(0.7)
-        }.onTapGesture {
-            viewModel.customLocationEnabled.toggle()
+            .accessibilityKey(.headerRefresh)
+            .accessibilityAction {
+                Task {
+                    await viewModel.loadMarkers()
+                }
+            }
         }
     }
 }

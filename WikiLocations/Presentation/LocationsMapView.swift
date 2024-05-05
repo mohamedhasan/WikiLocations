@@ -22,6 +22,7 @@ struct LocationsMapView: View {
                 switch state {
                 case .loading:
                     ProgressView()
+                        .accessibilityKey(.progressView)
                 case .error(let error):
                     ErrorRetryView(error: error) {
                         Task {

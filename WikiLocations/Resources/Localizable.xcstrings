@@ -4,13 +4,23 @@
     "" : {
 
     },
+    "addCustomLocationHint" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap here to add a place on the map"
+          }
+        }
+      }
+    },
     "addLocationInstruction" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tap on map to add your own place."
+            "value" : "Tap on map to add your own place or tap again to disable."
           }
         }
       }
@@ -33,6 +43,36 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Some of the data is corrupted, please consider updating the app."
+          }
+        }
+      }
+    },
+    "errorRetryAccessibilityHint" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try again"
+          }
+        }
+      }
+    },
+    "headerRefreshHint" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Refresh places"
+          }
+        }
+      }
+    },
+    "mapViewAccessibilityLabel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "World map with wikipedia locations"
           }
         }
       }
@@ -66,6 +106,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No locations found, please try again"
+          }
+        }
+      }
+    },
+    "openInWikiHint" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap to open in Wikipedia app"
+          }
+        }
+      }
+    },
+    "progressAccessibilityLabel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loading data"
           }
         }
       }
@@ -109,7 +169,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tap to add new location"
+            "value" : "Tap here to add new location"
           }
         }
       }

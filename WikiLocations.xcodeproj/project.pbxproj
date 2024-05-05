@@ -52,6 +52,10 @@
 		65F2D8FE2BE6C228003DC95E /* TestEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D8FD2BE6C228003DC95E /* TestEnvironment.swift */; };
 		65F2D9002BE6C464003DC95E /* locations-empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 65F2D8FF2BE6C464003DC95E /* locations-empty.json */; };
 		65F2D9022BE6C954003DC95E /* MockExternalLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D9012BE6C953003DC95E /* MockExternalLink.swift */; };
+		65F2D9052BE7C0A9003DC95E /* AccessibilityKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D9042BE7C0A9003DC95E /* AccessibilityKeys.swift */; };
+		65F2D9072BE7C320003DC95E /* AccessibilityWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D9062BE7C320003DC95E /* AccessibilityWrapper.swift */; };
+		65F2D9092BE7C368003DC95E /* AccessibilityWrapper+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D9082BE7C368003DC95E /* AccessibilityWrapper+Extension.swift */; };
+		65F2D90B2BE7C44E003DC95E /* View+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F2D90A2BE7C44E003DC95E /* View+Accessibility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +124,10 @@
 		65F2D8FD2BE6C228003DC95E /* TestEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEnvironment.swift; sourceTree = "<group>"; };
 		65F2D8FF2BE6C464003DC95E /* locations-empty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "locations-empty.json"; sourceTree = "<group>"; };
 		65F2D9012BE6C953003DC95E /* MockExternalLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockExternalLink.swift; sourceTree = "<group>"; };
+		65F2D9042BE7C0A9003DC95E /* AccessibilityKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityKeys.swift; sourceTree = "<group>"; };
+		65F2D9062BE7C320003DC95E /* AccessibilityWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityWrapper.swift; sourceTree = "<group>"; };
+		65F2D9082BE7C368003DC95E /* AccessibilityWrapper+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccessibilityWrapper+Extension.swift"; sourceTree = "<group>"; };
+		65F2D90A2BE7C44E003DC95E /* View+Accessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Accessibility.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				65F2D8742BE43AC5003DC95E /* WikiLocationsApp.swift */,
+				65F2D9032BE7C07F003DC95E /* Accessibility */,
 				65F2D8D42BE55219003DC95E /* Resources */,
 				65F2D8D92BE59820003DC95E /* ExternalLinks */,
 				65F2D8BC2BE52CEF003DC95E /* Utilities */,
@@ -296,6 +305,7 @@
 				65F2D8E42BE5BF8E003DC95E /* MapHeader.swift */,
 				65F2D8D72BE55834003DC95E /* MarkerAnnotationView.swift */,
 				65F2D8CA2BE53B3A003DC95E /* ErrorRetryView.swift */,
+				65F2D90A2BE7C44E003DC95E /* View+Accessibility.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -375,6 +385,16 @@
 			children = (
 			);
 			path = Presentations;
+			sourceTree = "<group>";
+		};
+		65F2D9032BE7C07F003DC95E /* Accessibility */ = {
+			isa = PBXGroup;
+			children = (
+				65F2D9042BE7C0A9003DC95E /* AccessibilityKeys.swift */,
+				65F2D9062BE7C320003DC95E /* AccessibilityWrapper.swift */,
+				65F2D9082BE7C368003DC95E /* AccessibilityWrapper+Extension.swift */,
+			);
+			path = Accessibility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -516,6 +536,7 @@
 				65F2D8BB2BE52BE9003DC95E /* ProductionEnvironment.swift in Sources */,
 				65F2D8DD2BE5A062003DC95E /* WikiExternalLink.swift in Sources */,
 				65F2D8D32BE53EDF003DC95E /* MapView.swift in Sources */,
+				65F2D9052BE7C0A9003DC95E /* AccessibilityKeys.swift in Sources */,
 				65F2D8BE2BE52CF8003DC95E /* Configurations.swift in Sources */,
 				65F2D8A72BE4B48C003DC95E /* MarkerModel.swift in Sources */,
 				65F2D8CB2BE53B3A003DC95E /* ErrorRetryView.swift in Sources */,
@@ -525,7 +546,9 @@
 				65F2D8752BE43AC5003DC95E /* WikiLocationsApp.swift in Sources */,
 				65F2D8B12BE5289D003DC95E /* MarkersProvider.swift in Sources */,
 				65F2D8C92BE5345C003DC95E /* LocationModelResponse.swift in Sources */,
+				65F2D9092BE7C368003DC95E /* AccessibilityWrapper+Extension.swift in Sources */,
 				65F2D8C62BE531C7003DC95E /* MapMarkersState.swift in Sources */,
+				65F2D90B2BE7C44E003DC95E /* View+Accessibility.swift in Sources */,
 				65F2D8CE2BE53B67003DC95E /* AppStrings.swift in Sources */,
 				65F2D8B62BE529C0003DC95E /* FetchLocationsHandler.swift in Sources */,
 				65F2D8D82BE55834003DC95E /* MarkerAnnotationView.swift in Sources */,
@@ -539,6 +562,7 @@
 				65F2D8B42BE5295C003DC95E /* FetchLocationsProtocol.swift in Sources */,
 				65F2D8B92BE52B69003DC95E /* Environment.swift in Sources */,
 				65F2D8DF2BE5AB9D003DC95E /* MarkerType.swift in Sources */,
+				65F2D9072BE7C320003DC95E /* AccessibilityWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -710,6 +734,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WikiLocations/Preview Content\"";
+				DEVELOPMENT_TEAM = NB63UZX4SA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -738,6 +763,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WikiLocations/Preview Content\"";
+				DEVELOPMENT_TEAM = NB63UZX4SA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

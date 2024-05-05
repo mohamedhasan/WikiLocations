@@ -19,5 +19,13 @@ class AppStrings {
     static let tapToAddLocation = NSLocalizedString("tapToAddLocation", comment: "")
     static let addLocationInstruction = NSLocalizedString("addLocationInstruction", comment: "")
     static let refresh = NSLocalizedString("refresh", comment: "")
-    
+
+    //Accessibility:
+    static let progressAccessibilityLabel = NSLocalizedString("progressAccessibilityLabel", comment: "")
+    static let mapViewAccessibilityLabel = NSLocalizedString("mapViewAccessibilityLabel", comment: "")
+    static let errorRetryAccessibilityHint = NSLocalizedString("errorRetryAccessibilityHint", comment: "")
+    static let addCustomLocationEnabledHint = NSLocalizedString("addCustomLocationHint", comment: "")
+    static let addCustomLocationDisabledHint = NSLocalizedString("addCustomLocationHint", comment: "")
+    static let headerRefreshHint = NSLocalizedString("headerRefreshHint", comment: "")
+    static let openInWikiHint = NSLocalizedString("openInWikiHint", comment: "")
 }

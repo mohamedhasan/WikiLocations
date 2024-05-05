@@ -15,6 +15,7 @@ struct ErrorRetryView: View {
         VStack {
             Text(error.errorMessage)
                 .padding()
+                .accessibilityLabel(error.errorMessage)
             Spacer()
                 .frame(height: DesignSystem.shared.spacer.medium)
             Button(AppStrings.retryErrorButton) {
@@ -22,6 +23,7 @@ struct ErrorRetryView: View {
                     await retryAction()
                 }
             }
+            .accessibilityKey(.errorRetryButton)
         }
     }
 }

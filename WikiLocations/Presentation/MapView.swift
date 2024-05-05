@@ -22,6 +22,7 @@ struct MapView: View {
                         MarkerAnnotationView()
                             .environmentObject(viewModel)
                             .environmentObject(marker)
+                            .accessibilityIdentifier(marker.id)
                     }
                 })
                 if let userDefinedMarker = userDefinedMarker, customLocationEnabled {
@@ -45,7 +46,6 @@ struct MapView: View {
             }).onReceive(viewModel.$markers, perform: { fetchedMarkers in
                 markers = fetchedMarkers
             })
-            
         }
     }
 }
