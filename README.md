@@ -11,6 +11,7 @@ iOS app to fetch locations from server and show them on map, places can be used 
 https://github.com/mohamedhasan/wikipedia-ios/tree/add-location-deeplinking-support
 5. User can add their own location by tapping on `Tap here to add a place on the map` button, and then tapping any coordinates on the map.
 6. Tapping same button can disable adding custom location making it easier for the user to interact with the rest of the map.
+7. To open Wikipedia app a deeplink is used with the following example: `wikipedia://location?latitude=55.6713442&longitude=12.553785&name=Copenhagen` latitude and longitude is mandatory, and name is optional one.
 
 # Architecture:
 
