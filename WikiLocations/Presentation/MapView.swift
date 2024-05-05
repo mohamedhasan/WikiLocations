@@ -13,10 +13,10 @@ struct MapView: View {
     @State var userDefinedMarker: MarkerModel?
     @State var markers: [MarkerModel] = []
     @State var customLocationEnabled: Bool = false
-        
+
     var body: some View {
         MapReader { proxy in
-            Map() {
+            Map {
                 ForEach(markers, content: { marker in
                     Annotation(marker.location.title ?? "", coordinate: marker.location.coordinate) {
                         MarkerAnnotationView()
@@ -26,7 +26,9 @@ struct MapView: View {
                     }
                 })
                 if let userDefinedMarker = userDefinedMarker, customLocationEnabled {
-                    Annotation(userDefinedMarker.location.title ?? "", coordinate: userDefinedMarker.location.coordinate) {
+                    Annotation(
+                        userDefinedMarker.location.title ?? "",
+                        coordinate: userDefinedMarker.location.coordinate) {
                         MarkerAnnotationView()
                             .environmentObject(viewModel)
                             .environmentObject(userDefinedMarker)

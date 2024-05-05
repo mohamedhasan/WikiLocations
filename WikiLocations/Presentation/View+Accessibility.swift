@@ -27,7 +27,9 @@ extension View {
     func accessibilityLabelFor(marker: MarkerModel) -> AnyView {
         var view: AnyView = AnyView(self)
         view = AnyView(accessibilityIdentifier(marker.id))
-        var label = "Map pin for latitude \(marker.location.coordinate.latitude) and longitude \(marker.location.coordinate.longitude)"
+        var label = "Map pin for latitude" +
+        "\(marker.location.coordinate.latitude)" +
+        " and longitude \(marker.location.coordinate.longitude)"
         if let title = marker.location.title {
             label += "and named \(title)"
         }

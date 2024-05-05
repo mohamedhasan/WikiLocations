@@ -37,7 +37,7 @@ class DesignSystem {
         var primary: Color { color(light: .red, dark: .white.withAlphaComponent(0.7))}
         var secondary: Color { color(light: .green, dark: .lightGray)}
         var background: Color { color(light: .white, dark: .black.withAlphaComponent(0.9))}
-        var iconsTintColor: Color  { color(light: .systemBlue, dark: .systemCyan)}
+        var iconsTintColor: Color { color(light: .systemBlue, dark: .systemCyan)}
     }
 
     private init() {}

@@ -12,7 +12,7 @@ import CoreLocation
 @testable import WikiLocations
 
 final class MarkersProviderTests: XCTestCase {
-    
+
     func testProviderHasResults() async throws {
         let locationsHandler = MockFetchLocations()
         let locations = try await locationsHandler.fetchLocations()
@@ -25,13 +25,13 @@ final class MarkersProviderTests: XCTestCase {
         let locationsHandler = MockFetchLocations(mockedResult: .fail(error: .invalidData))
         let markersProvider = MarkersProvider(fetchLocationsHandler: locationsHandler)
         do {
-            let _ = try await markersProvider.loadMarkers()
+            _ = try await markersProvider.loadMarkers()
         } catch {
             if let networkError = error as? NetworkError {
                 XCTAssertEqual(networkError, NetworkError.invalidData)
                 return
             } else {
-                XCTFail()
+                XCTFail("NetworkError not mapped correctly")
             }
         }
         XCTFail("Didn't throw error")

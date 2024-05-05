@@ -36,7 +36,7 @@ final class MapViewModelTests: XCTestCase {
         case .error(let error):
             XCTAssertEqual(error, .noLocationsFound)
         default:
-            XCTFail()
+            XCTFail("Failed to show error")
         }
     }
 
@@ -48,7 +48,7 @@ final class MapViewModelTests: XCTestCase {
         case .error(let error):
             XCTAssertEqual(error, .noInternetConnection)
         default:
-            XCTFail()
+            XCTFail("Didn't show correct error")
         }
     }
 
@@ -57,7 +57,7 @@ final class MapViewModelTests: XCTestCase {
         let viewModel = MapViewModel(environment: testEnvironment)
         await viewModel.loadMarkers()
         guard let marker = markers.first else {
-            XCTFail()
+            XCTFail("No markers added")
             return
         }
         viewModel.toggleMarkerSelection(marker)
@@ -100,7 +100,7 @@ final class MapViewModelTests: XCTestCase {
         let viewModel = MapViewModel(environment: testEnvironment)
         await viewModel.loadMarkers()
         guard let marker = viewModel.markers.first else {
-            XCTFail()
+            XCTFail("No markers added")
             return
         }
         viewModel.openExternalLink(marker)

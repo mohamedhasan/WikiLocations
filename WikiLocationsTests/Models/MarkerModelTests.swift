@@ -10,7 +10,7 @@ import CoreLocation
 @testable import WikiLocations
 
 final class MarkerModelTests: XCTestCase {
-    
+
     func testMarkerContainsCoordinate() throws {
         let location = LocationModel(name: "India",
                                      lat: 23.54042,

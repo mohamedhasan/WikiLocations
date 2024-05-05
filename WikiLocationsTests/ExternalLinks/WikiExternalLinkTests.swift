@@ -20,8 +20,7 @@ final class WikiExternalLinkTests: XCTestCase {
                 url.absoluteString,
                 "wikipedia://location?latitude=23.23423&longitude=45.23023&name=India")
         } else {
-            XCTFail()
+            XCTFail("Wrong deeplink URL")
         }
     }
 }
-

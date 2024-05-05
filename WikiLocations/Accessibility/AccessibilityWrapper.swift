@@ -7,29 +7,48 @@
 
 import Foundation
 
-import Foundation
-
 class AccessibilityWrapper {
     public static let shared = AccessibilityWrapper()
 
     private init() {}
-    
-    func values(_ key: AccessibilityKey) -> (id: String, label: String?, hint: String?) {
+
+    struct AccessibilitySettings {
+        let id: String
+        let label: String?
+        let hint: String?
+    }
+
+    func values(_ key: AccessibilityKey) -> AccessibilitySettings {
         return switch key {
         case .progressView:
-            (id: "mainView.progressview", label: AppStrings.progressAccessibilityLabel, hint: nil)
+            AccessibilitySettings(id: "mainView.progressview", label: AppStrings.progressAccessibilityLabel, hint: nil)
         case .mapView:
-            (id: "mainView.mapView", label: AppStrings.mapViewAccessibilityLabel, hint: nil)
+            AccessibilitySettings(id: "mainView.mapView", label: AppStrings.mapViewAccessibilityLabel, hint: nil)
         case .errorRetryButton:
-            (id: "mainView.errorView.retryButton", label: nil, hint: AppStrings.errorRetryAccessibilityHint)
+            AccessibilitySettings(
+                id: "mainView.errorView.retryButton",
+                label: nil,
+                hint: AppStrings.errorRetryAccessibilityHint)
         case .headerCustomLocationEnabled(true):
-            (id: "mainView.header.addCustomLocation", label: nil, hint: AppStrings.addCustomLocationEnabledHint)
+            AccessibilitySettings(
+                id: "mainView.header.addCustomLocation",
+                label: nil,
+                hint: AppStrings.addCustomLocationEnabledHint)
         case .headerCustomLocationEnabled(false):
-            (id: "mainView.header.addCustomLocation", label: nil, hint: AppStrings.addCustomLocationDisabledHint)
+            AccessibilitySettings(
+                id: "mainView.header.addCustomLocation",
+                label: nil,
+                hint: AppStrings.addCustomLocationDisabledHint)
         case .headerRefresh:
-            (id: "mainView.header.refresh", label: nil, hint: AppStrings.headerRefreshHint)
+            AccessibilitySettings(
+                id: "mainView.header.refresh",
+                label: nil,
+                hint: AppStrings.headerRefreshHint)
         case .openInWikipedia:
-            (id: "mainView.mapView.pin.image", label: AppStrings.openInWikiHint, hint: nil)
+            AccessibilitySettings(
+                id: "mainView.mapView.pin.image",
+                label: AppStrings.openInWikiHint,
+                hint: nil)
         }
     }
 }

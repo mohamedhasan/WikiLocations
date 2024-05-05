@@ -6,7 +6,9 @@
 //
 
 /*
- Source: https://stackoverflow.com/questions/59301340/handle-internet-connection-automatically-when-internet-goes-off-and-comes-again
+ Source: https://stackoverflow
+ .com/questions/59301340/
+ handle-internet-connection-automatically-when-internet-goes-off-and-comes-again
  */
 import Foundation
 import SystemConfiguration
@@ -16,7 +18,11 @@ class NetworkReachability {
     public static let shared: NetworkReachability = NetworkReachability()
 
     public var networkAvailable: Bool {
-        var zeroAddress = sockaddr_in(sin_len: 0, sin_family: 0, sin_port: 0, sin_addr: in_addr(s_addr: 0), sin_zero: (0, 0, 0, 0, 0, 0, 0, 0))
+        var zeroAddress = sockaddr_in(sin_len: 0,
+                                      sin_family: 0,
+                                      sin_port: 0,
+                                      sin_addr: in_addr(s_addr: 0),
+                                      sin_zero: (0, 0, 0, 0, 0, 0, 0, 0))
         zeroAddress.sin_len = UInt8(MemoryLayout.size(ofValue: zeroAddress))
         zeroAddress.sin_family = sa_family_t(AF_INET)
 

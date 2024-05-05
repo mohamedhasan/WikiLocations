@@ -20,7 +20,10 @@ struct MapHeader: View {
                     AppStrings.addLocationInstruction : AppStrings.tapToAddLocation
                 )
                 .font(.callout)
-                Image(systemName: customLocationEnabled ? DesignSystem.shared.assets.customLocationEnabled : DesignSystem.shared.assets.customLocationDisabled)
+                Image(systemName: customLocationEnabled
+                      ?
+                      DesignSystem.shared.assets.customLocationEnabled
+                      : DesignSystem.shared.assets.customLocationDisabled)
                 .foregroundColor(DesignSystem.shared.colors.iconsTintColor)
             }.onTapGesture {
                 viewModel.customLocationEnabled.toggle()

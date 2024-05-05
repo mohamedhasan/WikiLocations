@@ -27,4 +27,3 @@ struct ErrorRetryView: View {
         }
     }
 }
-

@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ExternalLinkProtocol {
-    var schema: String { set get }
-    var host: String { set get }
+    var schema: String { get set }
+    var host: String { get set }
     func url(for location: LocationPresentable) -> URL?
 }
